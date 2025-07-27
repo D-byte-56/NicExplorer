@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NicExplorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icono.png">
+</head>
+
+<body> <!-- Background Video -->
+  <video autoplay muted loop id="background-video">
+    <source src="San Juan Surrr.mp4" type="video/mp4">
+    Tu navegador no soporta el video HTML5.
+  </video>
+
+  <header>  <!-- Navigation Bar -->
+    <div class="nav-container">
+      <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="hoteles.html">Hoteles</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="#">Politica de Privacidad</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+<!-- Language Selector -->
+    <select id="language-selector">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+    </select>
+  </header>
+<!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="titulo_hero">Descubre Nicaragua</h1>
+      <p data-i18n="descripcion_hero">Tu aventura te espera en el corazón de Centroamérica.</p>
+
+      <div class="search-section">
+        <input type="text" readonly placeholder="Busca destinos, hoteles o tours...">
+        <a href="destinos.html">
+          <button data-i18n="buscar_btn">Explorar Destinos</button>
+        </a>
+      </div>
+    </div>
+  </section>
+<!--footer section-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: info@nicexplorer.com</p>
+        <p>Teléfono: +505 1234 5678</p>
+        <p>Dirección: Managua, Nicaragua</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <img src="facebook.png" alt="Facebook">
+          <img src="instagram.png" alt="Instagram">
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Métodos de Pago</h3>
+        <div class="payment-icons">
+          <img src="visa.svg" alt="Visa">
+          <img src="mastercard.svg" alt="MasterCard">
+          <img src="paypal.svg" alt="PayPal">
+          <img src="stripe.svg" alt="Stripe">
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 NicExplorer. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="script1.js"></script>
+  <script>
+    const selector = document.getElementById('language-selector');
+
+    function updateTexts(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    selector.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      updateTexts(selectedLang);
+      localStorage.setItem('language', selectedLang);
+    });
+
+    const savedLang = localStorage.getItem('language') || 'es';
+    selector.value = savedLang;
+    updateTexts(savedLang);
+  </script>
+</body>
+</html>

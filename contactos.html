@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NicExplorer</title>
+  <link rel="stylesheet" href="contactos.css">
+  <link rel="icon" href="icono.png">
+</head>
+<body>
+  <header>  <!-- Navigation Bar -->
+    <div class="nav-container">
+      <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+      <nav>
+           <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="hoteles.html">Hoteles</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="#">Politica de Privacidad</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+<!-- Language Selector -->
+    <select id="language-selector">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+    </select>
+  </header>
+   <form>
+     <h2>Formulario de Contacto</h2>
+        <!--Simple input-->
+        <fieldset>
+            <legend>Informacion Basica </legend>
+        <div class="form-input">
+            <label >Nombre Completo
+            <input type="text" placeholder="Jhon Doe">
+            </label>
+        </div>
+        <div class="form-input">
+            <label for="nn">Email</label>
+            <input type="email" placeholder="JhonDoe@gmail.com" id="nn">
+        </div>
+        </fieldset>
+     
+         <!--Textarea-->
+        <div class="form-input">
+            <label for="mensaje">Mensaje</label>
+            <textarea placeholder="Deja tu mensaje" id="mensaje"></textarea>
+        </div>
+        <div class="form-input">
+            <label>Acepto los terminos y condiciones.
+           <input type="checkbox" class="checkbox">
+           </label>
+           <input type="button" value="Enviar" class="btn">
+        </div>
+    </form>
+
+    <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: info@nicexplorer.com</p>
+        <p>Teléfono: +505 1234 5678</p>
+        <p>Dirección: Managua, Nicaragua</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <img src="facebook.png" alt="Facebook">
+          <img src="instagram.png" alt="Instagram">
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Métodos de Pago</h3>
+        <div class="payment-icons">
+          <img src="visa.svg" alt="Visa">
+          <img src="mastercard.svg" alt="MasterCard">
+          <img src="paypal.svg" alt="PayPal">
+          <img src="stripe.svg" alt="Stripe">
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 NicExplorer. Todos los derechos reservados.
+    </div>
+  </footer>
+
+    
+    
+  <script src="lang.js"></script>
+  <script>
+    const selector = document.getElementById('language-selector');
+
+    function updateTexts(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    selector.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      updateTexts(selectedLang);
+      localStorage.setItem('language', selectedLang);
+    });
+
+    const savedLang = localStorage.getItem('language') || 'es';
+    selector.value = savedLang;
+    updateTexts(savedLang);
+  </script>
+</body>
+</html>
