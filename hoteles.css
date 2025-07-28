@@ -214,10 +214,10 @@ header {
 
  footer {
     
-      color: white;
+      color: black;
       padding: 40px 20px 20px;
       font-size: 15px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      text-shadow: 1px 1px 4px rgba(249, 248, 248, 0.7);
     }
 
     .footer-container {
@@ -246,6 +246,7 @@ header {
       height: 32px;
       margin-right: 10px;
       filter: brightness(0) invert(1);
+      
     }
 
     .social-icons,
@@ -253,13 +254,14 @@ header {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      color: #0a0a0a;
     }
 
     .copyright {
       text-align: center;
       padding-top: 150px;
       font-size: 13px;
-      color: #cbd5e1;
+      color: #0a0a0a;
     }
     #language-selector {
       position: absolute;

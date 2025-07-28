@@ -246,10 +246,10 @@ header {
 
  footer {
     
-      color: white;
+      color: black;
       padding: 40px 20px 20px;
       font-size: 15px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      text-shadow: 1px 1px 4px rgba(248, 245, 245, 0.7);
     }
 
     .footer-container {
@@ -291,7 +291,7 @@ header {
       text-align: center;
       padding-top: 150px;
       font-size: 13px;
-      color: #cbd5e1;
+      color: #0e0e0e;
     }
 
     #language-selector {
