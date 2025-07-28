@@ -62,6 +62,21 @@ header {
       color: #fff;
       width: 150px;
     } 
+      /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #0c0c0b;
+      margin: 2px 0;
+      transition: 0.4s;
+    }
+
 
 input, textarea, select{ /*====Se puede agregar otro elemento para que
      pueda tener la misma configuracion====*/
@@ -177,9 +192,9 @@ legend{
       flex-wrap: wrap;
     }
 
-    .copyright {
+     .copyright {
       text-align: center;
-      padding-top: 90px;
+      padding-top: 150px;
       font-size: 13px;
       color: #cbd5e1;
     }
@@ -259,7 +274,7 @@ header {
       z-index: 1001;
       font-size: 1em;
       color: #fff;
-      width: 150px;
+      width: 94px;
     } 
 
 input, textarea, select{ /*====Se puede agregar otro elemento para que
@@ -335,3 +350,55 @@ legend{
 
 
 }
+
+ /* Responsive Design */
+    @media (max-width: 768px) {
+      .logo {
+        height: 100px;
+        left: 0;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: #0c0c0b;
+        font-size: 20px;
+      }
+
+      .hamburger {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 140px;
+      }
+      
+      #language-selector{
+       position: absolute;
+       top: 0px;
+       right: 0px; /* cámbialo a 60px o más */
+      }
+
+      #language-selector {
+        margin-bottom:0px;
+        margin-left: 190px;
+      }
+  
+    }

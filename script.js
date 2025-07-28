@@ -60,5 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Inicia con la primera imagen activa
         updateCarousel();
-    });
+
+     
 });
+    });
+

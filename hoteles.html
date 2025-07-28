@@ -9,11 +9,16 @@
 </head>
 <body>
 
-     <header>  <!-- Navigation Bar -->
+    <header>  <!-- Navigation Bar -->
     <div class="nav-container">
       <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+      <div class="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
       <nav>
-         <ul class="nav-links">
+        <ul class="nav-links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="hoteles.html">Hoteles</a></li>
           <li><a href="destinos.html">Destinos</a></li>
@@ -35,7 +40,6 @@
       <option value="ja">日本語</option>
     </select>
   </header>
-
 
     <h2 class="seccion-titulo">Alojamientos </h2>
     <p class="seccion-descripcion"> 
@@ -164,5 +168,14 @@
   </footer>
 
     <script src="hoteles.js"></script>
+
+      <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  });
+</script>
+
 </body>
 </html>

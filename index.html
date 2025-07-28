@@ -17,6 +17,11 @@
   <header>  <!-- Navigation Bar -->
     <div class="nav-container">
       <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+      <div class="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Inicio</a></li>
@@ -85,7 +90,7 @@
     </div>
   </footer>
 
-  <script src="script1.js"></script>
+  <script src="script.js"></script>
   <script>
     const selector = document.getElementById('language-selector');
 
@@ -109,5 +114,15 @@
     selector.value = savedLang;
     updateTexts(savedLang);
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  });
+</script>
+
+
+ 
 </body>
 </html>
