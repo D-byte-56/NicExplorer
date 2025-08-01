@@ -12,50 +12,44 @@
     <link rel="stylesheet" href="destinos.css">
 </head>
 <body>
+    <header>
+        <div class="nav-container">
+            <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hoteles.html">Hoteles</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <select id="language-selector">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+        </select>
+    </header>
 
-       <header>  <!-- Navigation Bar -->
-    <div class="nav-container">
-      <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
-      <div class="hamburger">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="hoteles.html">Hoteles</a></li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="#">Politica de Privacidad</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Testimonios</a></li>
-          <li><a href="contactos.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-<!-- Language Selector -->
-    <select id="language-selector">
-      <option value="es">Español</option>
-      <option value="en">English</option>
-      <option value="fr">Français</option>
-      <option value="de">Deutsch</option>
-      <option value="ru">Русский</option>
-      <option value="zh">中文</option>
-      <option value="ja">日本語</option>
-    </select>
-  </header>
-
-     <h2 class="seccion-titulo">Explora Nuestros Destinos</h2>
-<p class="seccion-descripcion">
-    Descubre los mejores lugares turísticos del mundo con paquetes diseñados para ti. ¡Vive una experiencia inolvidable!
-</p>
-<div class="destinos-grid">
-    <!-- Tarjetas existentes -->
-</div>
+    <h2 class="seccion-titulo">Explora Nuestros Destinos</h2>
+    <p class="seccion-descripcion">
+        Descubre los mejores lugares turísticos del mundo con paquetes diseñados para ti. ¡Vive una experiencia inolvidable!
+    </p>
     <div class="destinos-grid">
-        <!-- Tarjeta de ejemplo -->
+        <!-- Tarjetas existentes -->
         <div class="tarjeta-destino">
-            <!-- Carrusel -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -68,11 +62,9 @@
                         <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
                     </div>
                 </div>
-                <!-- Botones de navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <!-- Contenido -->
             <div class="tarjeta-contenido">
                 <h2 class="tarjeta-titulo">San Juan del Sur</h2>
                 <p class="tarjeta-descripcion">
@@ -94,34 +86,30 @@
                     </div>
                 </div>
                 <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
+                <button class="tarjeta-boton" onclick="openHotelModal('sanJuan')">Ver hotel</button>
             </div>
         </div>
-        <!-- Puedes copiar y pegar más tarjetas aquí -->
 
         <div class="tarjeta-destino">
-            <!-- Carrusel -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="https://cdn.forbescentroamerica.com/2021/08/Ometepe-Nicaragua-e1628622123750-1024x572.jpg" alt="Isla de Ometepe 1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/da/8c/c7/little-morgan-s-resort.jpg?w=600&h=400&s=1"alt="Isla de Ometepe 1">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/da/8c/c7/little-morgan-s-resort.jpg?w=600&h=400" alt="Isla de Ometepe 2">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://www.renunciamosyviajamos.com/wp-content/uploads/2015/07/Moyogalpa-Isla-Ometepe-Renunciamos-y-viajamos1.jpg" alt="Isla de Ometepe 1">
+                        <img src="https://www.renunciamosyviajamos.com/wp-content/uploads/2015/07/Moyogalpa-Isla-Ometepe-Renunciamos-y-viajamos1.jpg" alt="Isla de Ometepe 3">
                     </div>
                 </div>
-                <!-- Botones de navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <!-- Contenido -->
             <div class="tarjeta-contenido">
                 <h2 class="tarjeta-titulo">Isla de Ometepe</h2>
                 <p class="tarjeta-descripcion">
-                   Un paraíso volcánico con lagunas, selvas y vistas impresionantes en el corazón del lago Cocibolca. Ideal para aventureros y amantes de la naturaleza.
+                    Un paraíso volcánico con lagunas, selvas y vistas impresionantes en el corazón del lago Cocibolca. Ideal para aventureros y amantes de la naturaleza.
                 </p>
                 <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
                 <div class="tarjeta-info">
@@ -139,230 +127,72 @@
                     </div>
                 </div>
                 <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
+                <button class="tarjeta-boton" onclick="openHotelModal('ometepe')">Ver hotel</button>
             </div>
         </div>
 
-        <div class="tarjeta-destino">
-            <!-- Carrusel -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Playa San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Atardecer San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
-                    </div>
-                </div>
-                <!-- Botones de navegación -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!-- Contenido -->
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">San Juan del Sur</h2>
-                <p class="tarjeta-descripcion">
-                    Descubre la vibrante playa de San Juan del Sur, un paraíso costero con arenas doradas, olas perfectas para el surf y atardeceres inolvidables.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
-                </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
-            </div>
-        </div>
+        <!-- Más tarjetas pueden copiarse aquí -->
+    </div>
 
-        <div class="tarjeta-destino">
-            <!-- Carrusel -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Playa San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Atardecer San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
-                    </div>
+    <!-- Modal para detalles del hotel -->
+    <div id="hotel-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="hotel-title"></h2>
+            <div class="swiper-container modal-swiper">
+                <div class="swiper-wrapper" id="hotel-images">
+                    <!-- Imágenes del hotel se cargarán aquí -->
                 </div>
-                <!-- Botones de navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <!-- Contenido -->
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">San Juan del Sur</h2>
-                <p class="tarjeta-descripcion">
-                    Descubre la vibrante playa de San Juan del Sur, un paraíso costero con arenas doradas, olas perfectas para el surf y atardeceres inolvidables.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
-                </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
-            </div>
-        </div>
-
-        <div class="tarjeta-destino">
-            <!-- Carrusel -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Playa San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Atardecer San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
-                    </div>
-                </div>
-                <!-- Botones de navegación -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!-- Contenido -->
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">San Juan del Sur</h2>
-                <p class="tarjeta-descripcion">
-                    Descubre la vibrante playa de San Juan del Sur, un paraíso costero con arenas doradas, olas perfectas para el surf y atardeceres inolvidables.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
-                </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
-            </div>
-        </div>
-
-        <div class="tarjeta-destino">
-            <!-- Carrusel -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Playa San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Atardecer San Juan del Sur">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
-                    </div>
-                </div>
-                <!-- Botones de navegación -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!-- Contenido -->
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">San Juan del Sur</h2>
-                <p class="tarjeta-descripcion">
-                    Descubre la vibrante playa de San Juan del Sur, un paraíso costero con arenas doradas, olas perfectas para el surf y atardeceres inolvidables.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
-                </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <a href="#reservar" class="tarjeta-boton">Reservar Ahora</a>
-            </div>
+            <p id="hotel-description"></p>
+            <p id="hotel-price"></p>
+            <button class="tarjeta-boton" id="reserve-button">Reservar</button>
         </div>
     </div>
 
-    <!--footer section-->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Contacto</h3>
-        <p>Email: info@nicexplorer.com</p>
-        <p>Teléfono: +505 1234 5678</p>
-        <p>Dirección: Managua, Nicaragua</p>
-      </div>
-      <div class="footer-section">
-        <h3>Síguenos</h3>
-        <div class="social-icons">
-          <img src="facebook.png" alt="Facebook">
-          <img src="instagram.png" alt="Instagram">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@nicexplorer.com</p>
+                <p>Teléfono: +505 1234 5678</p>
+                <p>Dirección: Managua, Nicaragua</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <img src="facebook.png" alt="Facebook">
+                    <img src="instagram.png" alt="Instagram">
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <img src="visa.svg" alt="Visa">
+                    <img src="mastercard.svg" alt="MasterCard">
+                    <img src="paypal.svg" alt="PayPal">
+                    <img src="stripe.svg" alt="Stripe">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-section">
-        <h3>Métodos de Pago</h3>
-        <div class="payment-icons">
-          <img src="visa.svg" alt="Visa">
-          <img src="mastercard.svg" alt="MasterCard">
-          <img src="paypal.svg" alt="PayPal">
-          <img src="stripe.svg" alt="Stripe">
+        <div class="copyright">
+            © 2025 NicExplorer. Todos los derechos reservados.
         </div>
-      </div>
-    </div>
-    <div class="copyright">
-      © 2025 NicExplorer. Todos los derechos reservados.
-    </div>
-  </footer>
+    </footer>
 
     <!-- SwiperJS JavaScript -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Enlace al JavaScript -->
     <script src="destinos.js"></script>
     
-     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-  });
-</script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.hamburger').addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

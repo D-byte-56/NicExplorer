@@ -254,14 +254,13 @@ header {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      color: #0a0a0a;
     }
 
     .copyright {
       text-align: center;
       padding-top: 150px;
       font-size: 13px;
-      color: #0a0a0a;
+      
     }
     #language-selector {
       position: absolute;
