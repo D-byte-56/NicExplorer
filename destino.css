@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 170px;
+  transition: height 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  text-shadow: 0px 0px 2px #716868;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  border-bottom: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #0c0c0b;
+  margin: 2px 0;
+  transition: 0.4s;
+}
+
+/* Language Selector */
+#language-selector {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  color: black;
+  z-index: 1001;
+}
+#language-selector:hover {
+  background-color: #e2e6ea;
+  border-radius: 5px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.destinations {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.destination {
+    margin-bottom: 20px;
+}
+
+.destination-title {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+.destination-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.star {
+    cursor: pointer;
+}
+
+textarea {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: 80%;
+    height: 50px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.description {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* Estilos para carruseles de paquetes, hoteles y restaurantes */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 33.33%; /* Muestra 3 tarjetas a la vez */
+    box-sizing: border-box;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 0 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h4 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: 100%; /* En móvil, muestra 1 a la vez */
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    height: 80%;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Carousel styles */
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+form label {
+    margin-top: 15px;
+}
+
+form input, form select {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.quantity input {
+    width: 60px;
+    text-align: center;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+#precio-total {
+    font-weight: bold;
+}
