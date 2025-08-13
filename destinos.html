@@ -3,196 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinos Turísticos</title>
-    <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Enlace al CSS -->
-    <link rel="stylesheet" href="destinos.css">
+    <title>Explora Nuestros Destinos - NicExplorer</title>
+    <link rel="stylesheet" href="destino.css">
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="hoteles.html">Hoteles</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="#">Politica de Privacidad</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Testimonios</a></li>
-                    <li><a href="contactos.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <select id="language-selector">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="ru">Русский</option>
-            <option value="zh">中文</option>
-            <option value="ja">日本語</option>
-        </select>
-    </header>
+  <header>  <!-- Navigation Bar -->
+    <div class="nav-container">
+      <img src="nuevologocopia.png" alt="NicExplorer Logo" class="logo">
+      <div class="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="#">Politica Privacidad</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+<!-- Language Selector -->
+    <select id="language-selector">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+    </select>
+  </header>
 
-    <h2 class="seccion-titulo">Explora Nuestros Destinos</h2>
-    <p class="seccion-descripcion">
-        Descubre los mejores lugares turísticos del mundo con paquetes diseñados para ti. ¡Vive una experiencia inolvidable!
-    </p>
-    <div class="destinos-grid">
-        <!-- Tarjetas existentes -->
-        <div class="tarjeta-destino">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Playa San Juan del Sur">
+    <section class="section-title">
+        <h1>EXPLORA NUESTROS DESTINOS</h1>
+        <p>Descubre los mejores lugares turísticos del mundo con paquetes diseñados para ti. ¡Vive una experiencia inolvidable!</p>
+    </section>
+
+    <div class="destinations">
+        <!-- Destino: San Juan del Sur -->
+        <div class="destination">
+            <h2 class="destination-title" onclick="toggleDestination(0)">San Juan del Sur</h2>
+            <div class="destination-content">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="https://www.nicaragua-travels.com/wp-content/uploads/adobestock-171100762-1280x800.jpeg" alt="Bahía de San Juan del Sur">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Atardecer San Juan del Sur">
+                    <div class="mySlides fade">
+                        <img src="https://mundoempresarial.co.cr/wp-content/uploads/2024/09/Playa-San-Juan-del-Sur-Nicaragua.jpg" alt="Vista panorámica de la ciudad">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1509233725247-49e657c61113" alt="Surf San Juan del Sur">
+                    <div class="mySlides fade">
+                        <img src="" alt="Playa y colinas">
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">San Juan del Sur</h2>
-                <p class="tarjeta-descripcion">
-                    Descubre la vibrante playa de San Juan del Sur, un paraíso costero con arenas doradas, olas perfectas para el surf y atardeceres inolvidables.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
+                <p class="description">San Juan del Sur es un municipio y ciudad costera en el océano Pacífico, en el departamento de Rivas, al suroeste de Nicaragua. Ubicada a 140 km al sur de Managua, es popular entre surfistas y es un lugar de vacaciones para muchas familias nicaragüenses y turistas extranjeros.</p>
+                
+                <h3>Paquetes Turísticos</h3>
+                <div class="carousel packages-carousel">
+                    <div class="carousel-track">
+                        <div class="card">
+                            <div class="slideshow-container card-slideshow">
+                                <div class="mySlides fade">
+                                    <img src="" alt="Paquete Surf y Playa 1">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=mLofVsuU72me9gH3QxNtJQ4Ux0Oao3QT4RcuxNRp7I=" alt="Paquete Surf y Playa 2">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="https://www.alongdustyroads.com/s3fs-public/2022-05/IMG_2481.jpg" alt="Paquete Surf y Playa 3">
+                                </div>
+                                <a class="prev" onclick="plusCardSlides(this, -1)">&#10094;</a>
+                                <a class="next" onclick="plusCardSlides(this, 1)">&#10095;</a>
+                            </div>
+                            <h4>Paquete Surf y Playa</h4>
+                            <p>Descubre la vibrante playa de San Juan del Sur.</p>
+                            <ul>
+                                <li>Hotel 3 estrellas con desayuno</li>
+                                <li>Transporte ida y vuelta</li>
+                                <li>Clases de surf</li>
+                            </ul>
+                            <h3>$250</h3>
+                            <button onclick="openDetailsModal('surf', 250)">Ver Más</button>
+                        </div>
+                        <div class="card">
+                            <div class="slideshow-container card-slideshow">
+                                <div class="mySlides fade">
+                                    <img src="https://www.alongdustyroads.com/s3fs-public/2022-05/IMG_2481.jpg" alt="Paquete Aventura 1">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=pfopZ9hBS6r9dJUp23gW2q9uLYnwkZU3r6gV-CS9hOk=" alt="Paquete Aventura 2">
+                                </div>
+                                <a class="prev" onclick="plusCardSlides(this, -1)">&#10094;</a>
+                                <a class="next" onclick="plusCardSlides(this, 1)">&#10095;</a>
+                            </div>
+                            <h4>Paquete Aventura</h4>
+                            <p>Explora volcanes y naturaleza.</p>
+                            <ul>
+                                <li>Hotel 4 estrellas</li>
+                                <li>Transporte</li>
+                                <li>Tours guiados</li>
+                            </ul>
+                            <h3>$300</h3>
+                            <button onclick="openDetailsModal('aventura', 300)">Ver Más</button>
+                        </div>
                     </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
+                    <a class="prev" onclick="plusCarousel(-1, 'packages', 0)">&#10094;</a>
+                    <a class="next" onclick="plusCarousel(1, 'packages', 0)">&#10095;</a>
                 </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <button class="tarjeta-boton" onclick="openHotelModal('sanJuan')">Ver hotel</button>
+
+                <h3>Hoteles cerca de San Juan del Sur</h3>
+                <div class="carousel hotels-carousel">
+                    <div class="carousel-track">
+                        <div class="card">
+                            <div class="slideshow-container card-slideshow">
+                               <div class="mySlides fade">
+                                    <img src="" alt="HC Liri Hotel 2">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="" alt="HC Liri Hotel 2">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="" alt="HC Liri Hotel 2">
+                                </div>
+                                <a class="prev" onclick="plusCardSlides(this, -1)">&#10094;</a>
+                                <a class="next" onclick="plusCardSlides(this, 1)">&#10095;</a>
+                            </div>
+                            <h4>HC Liri Hotel</h4>
+                            <p>Calle Principal, San Juan del Sur</p>
+                            <div class="rating">
+                                <span class="star" onclick="setRating(this, 1)">★</span>
+                                <span class="star" onclick="setRating(this, 2)">★</span>
+                                <span class="star" onclick="setRating(this, 3)">★</span>
+                                <span class="star" onclick="setRating(this, 4)">★</span>
+                                <span class="star" onclick="setRating(this, 5)">★</span>
+                                <input type="hidden" name="rating" value="0">
+                                <span>(0 valoraciones)</span>
+                            </div>
+                            <p>Disponibilidad: 5 habitaciones</p>
+                            <textarea placeholder="Escribe tu comentario..."></textarea>
+                            <a href="https://wa.me/50512345678?text=Quiero%20reservar%20en%20HC%20Liri%20Hotel" target="_blank"><button>Contactar por WhatsApp</button></a>
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusCarousel(-1, 'hotels', 0)">&#10094;</a>
+                    <a class="next" onclick="plusCarousel(1, 'hotels', 0)">&#10095;</a>
+                </div>
+
+                <h3>Restaurantes cerca de San Juan del Sur</h3>
+                <div class="carousel restaurants-carousel">
+                    <div class="carousel-track">
+                        <div class="card">
+                            <div class="slideshow-container card-slideshow">
+                                <div class="mySlides fade">
+                                    <img src="https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s" alt="Dale Pues 1">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/1b/2c/3d/dale-pues.jpg" alt="Dale Pues 2">
+                                </div>
+                                <a class="prev" onclick="plusCardSlides(this, -1)">&#10094;</a>
+                                <a class="next" onclick="plusCardSlides(this, 1)">&#10095;</a>
+                            </div>
+                            <h4>Dale Pues</h4>
+                            <p>Frente al Mercado Municipal</p>
+                            <div class="rating">
+                                <span class="star" onclick="setRating(this, 1)">★</span>
+                                <span class="star" onclick="setRating(this, 2)">★</span>
+                                <span class="star" onclick="setRating(this, 3)">★</span>
+                                <span class="star" onclick="setRating(this, 4)">★</span>
+                                <span class="star" onclick="setRating(this, 5)">★</span>
+                                <input type="hidden" name="rating" value="0">
+                                <span>(0 valoraciones)</span>
+                            </div>
+                            <p>Disponibilidad: Abierto ahora</p>
+                            <textarea placeholder="Escribe tu comentario..."></textarea>
+                            <a href="https://wa.me/50511223344?text=Quiero%20reservar%20en%20Dale%20Pues" target="_blank"><button>Contactar por WhatsApp</button></a>
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusCarousel(-1, 'restaurants', 0)">&#10094;</a>
+                    <a class="next" onclick="plusCarousel(1, 'restaurants', 0)">&#10095;</a>
+                </div>
             </div>
         </div>
 
-        <div class="tarjeta-destino">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://cdn.forbescentroamerica.com/2021/08/Ometepe-Nicaragua-e1628622123750-1024x572.jpg" alt="Isla de Ometepe 1">
+        <!-- Destino: Isla de Ometepe -->
+        <div class="destination">
+            <h2 class="destination-title" onclick="toggleDestination(1)">Isla de Ometepe</h2>
+            <div class="destination-content">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Concepcion_volcano_in_Nicaragua_2012.jpg" alt="Volcán Concepción">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/da/8c/c7/little-morgan-s-resort.jpg?w=600&h=400" alt="Isla de Ometepe 2">
+                    <div class="mySlides fade">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Ometepe.jpg" alt="Concepción y Maderas">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://www.renunciamosyviajamos.com/wp-content/uploads/2015/07/Moyogalpa-Isla-Ometepe-Renunciamos-y-viajamos1.jpg" alt="Isla de Ometepe 3">
+                    <div class="mySlides fade">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Statue_and_children_omotepe.jpg" alt="Estatua precolombina">
                     </div>
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="tarjeta-contenido">
-                <h2 class="tarjeta-titulo">Isla de Ometepe</h2>
-                <p class="tarjeta-descripcion">
-                    Un paraíso volcánico con lagunas, selvas y vistas impresionantes en el corazón del lago Cocibolca. Ideal para aventureros y amantes de la naturaleza.
-                </p>
-                <h3 class="tarjeta-subtitulo">Este paquete incluye:</h3>
-                <div class="tarjeta-info">
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-hotel"></i>
-                        <span>Hotel 3 estrellas con desayuno incluido</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>Transporte ida y vuelta en shuttle</span>
-                    </div>
-                    <div class="tarjeta-info-item">
-                        <i class="fas fa-water"></i>
-                        <span>Clases de surf + tour en lancha</span>
-                    </div>
-                </div>
-                <p class="tarjeta-precio" data-precio="250">$250</p>
-                <button class="tarjeta-boton" onclick="openHotelModal('ometepe')">Ver hotel</button>
+                <p class="description">Ometepe es una isla formada por dos volcanes, Concepción y Maderas, que emergen del lago Nicaragua.</p>
+                <!-- Agrega paquetes, hoteles y restaurantes con sub-carruseles similares si lo deseas -->
             </div>
         </div>
-
-        <!-- Más tarjetas pueden copiarse aquí -->
     </div>
 
-    <!-- Modal para detalles del hotel -->
-    <div id="hotel-modal" class="modal">
+    <!-- Details Modal -->
+    <div id="details-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="hotel-title"></h2>
-            <div class="swiper-container modal-swiper">
-                <div class="swiper-wrapper" id="hotel-images">
-                    <!-- Imágenes del hotel se cargarán aquí -->
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <p id="hotel-description"></p>
-            <p id="hotel-price"></p>
-            <button class="tarjeta-boton" id="reserve-button">Reservar</button>
+            <span class="close" onclick="closeDetailsModal()">&times;</span>
+            <div id="package-details"></div>
+            <button onclick="openReservationModal()">Reservar</button>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>Email: info@nicexplorer.com</p>
-                <p>Teléfono: +505 1234 5678</p>
-                <p>Dirección: Managua, Nicaragua</p>
-            </div>
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <img src="facebook.png" alt="Facebook">
-                    <img src="instagram.png" alt="Instagram">
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Métodos de Pago</h3>
-                <div class="payment-icons">
-                    <img src="visa.svg" alt="Visa">
-                    <img src="mastercard.svg" alt="MasterCard">
-                    <img src="paypal.svg" alt="PayPal">
-                    <img src="stripe.svg" alt="Stripe">
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 NicExplorer. Todos los derechos reservados.
-        </div>
-    </footer>
+    <!-- Reservation Modal -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReservationModal()">&times;</span>
+            <form id="reservation-form">
+                <h2>Fase 1</h2>
+                <label for="tipo-turista">Tipo de turista:</label>
+                <select id="tipo-turista">
+                    <option value="nacional">Nacional</option>
+                    <option value="extranjero">Extranjero</option>
+                </select>
 
-    <!-- SwiperJS JavaScript -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Enlace al JavaScript -->
-    <script src="destinos.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.hamburger').addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.toggle('active');
-            });
-        });
-    </script>
+                <label for="tipo-tour">Tipo de tour:</label>
+                <select id="tipo-tour">
+                    <option value="privado">Tour privado</option>
+                    <option value="grupo">Tour en grupo</option>
+                </select>
+
+                <label for="fecha">Fecha para reservar:</label>
+                <input type="date" id="fecha">
+
+                <label>Adultos:</label>
+                <div class="quantity">
+                    <button type="button" onclick="decrementAdults()">-</button>
+                    <input type="text" id="num-adultos" value="1" readonly>
+                    <button type="button" onclick="incrementAdults()">+</button>
+                </div>
+                <p>(Niños de 6 años para adelante cuentan como un paquete individual)</p>
+
+                <p>Precio total: <span id="precio-total">$0</span></p>
+
+                <h2>Fase 2</h2>
+                <label for="servicio-adicional">Servicio adicional:</label>
+                <select id="servicio-adicional">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="transporte">Recomendación de transporte</option>
+                </select>
+                <div id="transporte-info" style="display: none; margin-top: 10px;">
+                    <p>Para transportarse desde el aeropuerto hasta el hotel que ellos se van a alojar, se le recomienda utilizar una aplicación llamada inDrive para movilizarse.</p>
+                    <a href="https://indrive.com/en/downloads/" target="_blank">Descargar la aplicación inDrive</a>
+                </div>
+
+                <h2>Fase 3: Pagos</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+                <label for="expiracion">Fecha de expiración:</label>
+                <input type="text" id="expiracion" placeholder="MM/YY" required oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+                <button type="button" onclick="submitReservation()" style="margin-top: 20px;">Reservar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="destino.js"></script>
 </body>
 </html>
